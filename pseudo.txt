@@ -1,3 +1,8 @@
+  from seeds.sql
+    -- purposefully leaving manager id blank for minnie mouse
+--when referencing minnie mouse as manager she has manager_id of 1 bc it is auto incrementing 
+-- lily is a customer service rep so 3 is the role id bc it is autoincrementing NOT BC THERE IS A 3 ABOVE 
+    
     PULLED FROM INDEX.JS --confused on how i will be linking these--->
        
         if (beginningOption === "View all departments") {

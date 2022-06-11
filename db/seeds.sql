@@ -1,9 +1,9 @@
-INSERT INTO department ( name)
+INSERT INTO department (name)
 VALUES( "Software Engineering"),("QA"),("Customer Service");
 
 INSERT INTO role (department_id,title,salary)
-VALUES(001, "Software Engineer", "80-100K"),(002,"Tester", "80K"),(003,"Customer Service Representative","50K-60K");
+VALUES(1, "Software Engineer", 90000),(2,"Tester", 80000 ),(3,"Customer Service Rep",50000);
 
 INSERT INTO employee (first_name, last_name, role_id,manager_id)
--- purposefully leaving manager id blank for minnie mouse
-VALUES("Minnie","Mouse","400"),("Lily","Bean","500","a1"),("Danny","Phantom","600","b3")
+
+VALUES("Minnie","Mouse", 1, NULL),("Lily","Bean",3,1),("Danny","Phantom",2,1);
