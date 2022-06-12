@@ -63,11 +63,11 @@ function queriesViewAllRoles() {
 //     }
 //     for (i in rows) {
 //       const newRoleObj = {};
-//       newRoleObj.id = res[i].id;
-//       newRoleObj.title = res[i].title;
+//       newRoleObj.id = rows[i].id;
+//       newRoleObj.title = rows[i].title;
 
 //       roleInfoArray.push(newRoleObj);
-//       roleTitlesArray.push(res[i].title);
+//       roleTitlesArray.push(rows[i].title);
 //     }
 //     console.table(rows);
 //   });
@@ -78,9 +78,9 @@ function queriesViewAllRoles() {
 //     }
 //     for (i in rows) {
 //       const newEmpObj = {};
-//       newEmpObj.id = res[i].id;
+//       newEmpObj.id = rows[i].id;
 
-//       const fullName = `${res[i].first_name} ${res[i].last_name}`;
+//       const fullName = `${rows[i].first_name} ${rows[i].last_name}`;
 //       newEmpObj.name = fullName;
 
 //       empInfoArr.push(newEmpObj);

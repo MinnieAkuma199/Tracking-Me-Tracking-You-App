@@ -6,8 +6,6 @@ const {
   queriesAddDepartments,
 } = require("./query");
 
-//empty arrays for user action functions
-
 function menu() {
   inquirer
     .prompt([
@@ -63,7 +61,6 @@ menu();
 function viewEmployee() {
   queriesViewEmployee();
   menu();
-  //   console.log("viewEmployee");
 }
 function addEmployee() {
   inquirer.prompt([
