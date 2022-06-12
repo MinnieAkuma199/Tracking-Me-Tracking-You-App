@@ -1,5 +1,9 @@
 const inquirer = require("inquirer");
-const { queriesViewAllDepartments } = require("./query");
+const {
+  queriesViewAllDepartments,
+  queriesViewEmployee,
+  queriesViewAllRoles,
+} = require("./query");
 //PUT ALL FUNCTIONS YOU ARE EXPORTING ABOVE ONCE DONE
 
 function menu() {
@@ -17,6 +21,7 @@ function menu() {
           "Add a role",
           "Add an employee",
           "Update an employee role",
+          "QUIT",
         ],
       },
     ])
@@ -47,8 +52,12 @@ function menu() {
     });
 }
 
+menu();
+
 function viewEmployee() {
-  console.log("viewEmployee");
+  queriesViewEmployee();
+  menu();
+  //   console.log("viewEmployee");
 }
 function addEmployee() {
   console.log("addEmployee");
@@ -57,8 +66,9 @@ function updateEmployee() {
   console.log("updateEmployee");
 }
 function viewAllDepartments() {
+  //from query.js but you required it in above
   queriesViewAllDepartments();
-  console.log("viewAllDepartments");
+  //   console.log("viewAllDepartments");
   menu();
   //calling menu function to loop back through qs
 }
@@ -69,7 +79,9 @@ function addDepartments() {
   // ]
 }
 function viewAllRoles() {
-  console.log("viewAllRoles");
+  queriesViewAllRoles();
+  menu();
+  //   console.log("viewAllRoles");
 }
 function addRole() {
   console.log("addRole");
