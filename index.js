@@ -3,8 +3,10 @@ const {
   queriesViewAllDepartments,
   queriesViewEmployee,
   queriesViewAllRoles,
+  queriesAddDepartments,
 } = require("./query");
-//PUT ALL FUNCTIONS YOU ARE EXPORTING ABOVE ONCE DONE
+
+//empty arrays for user action functions
 
 function menu() {
   inquirer
@@ -29,6 +31,7 @@ function menu() {
       console.log(beginningOption);
       if (beginningOption === "View all departments") {
         viewAllDepartments();
+
         //THEN I am presented with a formatted table showing department names and department ids
       } else if (beginningOption === "View all roles") {
         viewAllRoles();
@@ -48,40 +51,59 @@ function menu() {
       } else if (beginningOption === "Update an employee role") {
         updateEmployee();
         //THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+      } else if (beginningOption === "QUIT") {
+        console.clear();
       }
     });
 }
 
 menu();
 
+//USER ACTION FUNCTIONS
 function viewEmployee() {
   queriesViewEmployee();
   menu();
   //   console.log("viewEmployee");
 }
 function addEmployee() {
-  console.log("addEmployee");
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "first_name",
+      message: "Enter Employee's First Name",
+    },
+    {
+      type: "input",
+      name: "last_name",
+      message: "Enter Employee's Last Name",
+    },
+  ]);
+  queriesAddEmployee();
+  menu();
 }
 function updateEmployee() {
   console.log("updateEmployee");
 }
 function viewAllDepartments() {
-  //from query.js but you required it in above
+  //from query.js-- required it in above
   queriesViewAllDepartments();
-  //   console.log("viewAllDepartments");
   menu();
-  //calling menu function to loop back through qs
 }
 function addDepartments() {
   console.log("addDepartments");
-  // inquirer.prompt[
-
-  // ]
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "department",
+      message: "Enter the Department's Name",
+    },
+  ]);
+  queriesAddDepartments();
+  menu();
 }
 function viewAllRoles() {
   queriesViewAllRoles();
   menu();
-  //   console.log("viewAllRoles");
 }
 function addRole() {
   console.log("addRole");
