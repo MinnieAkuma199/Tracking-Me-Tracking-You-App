@@ -20,7 +20,7 @@
 
 ### Technology Used
 
-Tech Used: mySQL, Node, Inquirer, Express, HTML, JavaScript
+Tech Used: mySQL, Node, Inquirer, Express, JavaScript
 
 
 ### Installation
