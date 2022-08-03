@@ -4,18 +4,24 @@
 
 ## Description
 
--I wanted to create a CMS interface that allowed for non-developers to easily view and interact with information stored in databases.
+- Users/Management needs to be able to create and view information about teams and employees. I wanted to create a CMS interface that allowed for non-developers to easily view and interact with information stored in databases.
 
--I created a command-line application completely from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+- I created a command-line application completely from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
 ## Table of Contents
 
+- [Technology-Used](#technology-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributors](#contributors)
 - [License](#license)
 - [Tests](#tests)
 - [Additional Questions](#additional-questions)
+
+### Technology Used
+
+Tech Used: mySQL, Node, Inquirer, Express, HTML, JavaScript
+
 
 ### Installation
 
